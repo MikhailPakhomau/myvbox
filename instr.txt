@@ -1,0 +1,25 @@
+guest additions
+  1. install
+    Debian
+      apt install build-essential dkms linux-headers-$(uname -r)
+    Ubuntu
+      apt install build-essential linux-headers-generic perl make
+    RHEL
+      yum install kernel-devel-$(uname -r) kernel-headers-$(uname -r) gcc binutils make elfutils-libelf-devel dkms make bzip2 perl
+      or
+      dnf install kernel-devel-$(uname -r) kernel-headers-$(uname -r) gcc binutils make elfutils-libelf-devel dkms make bzip2 perl
+  2. devices > insert guest additions CD image
+  3. run /run/media/user/VBox_Gas_6.1.50/autorun.sh
+
+extension pack
+  download: https://download.virtualbox.org/virtualbox/6.1.50/Oracle_VM_VirtualBox_Extension_Pack-6.1.50.vbox-extpack
+  File → Preferences → Extensions > Adds new package
+
+# add shared folder
+  mkdir /mnt/sharedfolder
+  mount -t vboxsf sharename/mnt/sharedfolder
+
+# https://www.tonystechanditblog.com/2021/04/virtualbox-guest-additions-centos.html
+sudo yum install kernel-headers-$(uname -r) gcc binutils make elfutils-libelf-devel dkms make bzip2 perl
+
+
