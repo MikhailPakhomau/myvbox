@@ -23,3 +23,9 @@ extension pack
 sudo yum install kernel-headers-$(uname -r) gcc binutils make elfutils-libelf-devel dkms make bzip2 perl
 
 
+# from you
+sudo yum install https://dl.fedoraproject.org/pub/epel...
+
+Next you will see how to download the additional packages needed by running:
+
+install gcc kernel-devel kernel-headers make bzip2 perl
